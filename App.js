@@ -20,7 +20,6 @@ const MyStack = (props) => {
 
   return <NavigationStack/>
 };
-
 export default class App extends React.Component {
   state = {
     beaches: [
@@ -60,14 +59,18 @@ export default class App extends React.Component {
   };
 
   render() {
-    return <MyStack beaches={this.state.beaches}/>;
-    // const nav = {
-    //   state : {
-    //     params: {
-    //       beach: this.state.beaches[0]
-    //     }
-    //   }
-    // }
-    // return <BeachDetail navigation={nav}/>
-  }
+    return <MyStack beaches={this.state.beaches}/>
+  };
+
+  // render() { return (<BeachesList beaches={this.state.beaches}/>); }
+
+  // const nav = {
+  //   state : {
+  //     params: {
+  //       beach: this.state.beaches[0]
+  //     }
+  //   }
+  // }
+  // return <BeachDetail navigation={nav}/>
+
 }

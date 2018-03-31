@@ -10,12 +10,14 @@ export default class BeachButton extends Component {
   render() {
     return (
       <View style={styles.beach} key={this.props.beach.id}>
+
         <TouchableHighlight
           style={styles.button}
-          onPress={this._onBeachSelected}
-        >
+          onPress={this._onBeachSelected}>
           <Text style={styles.beachTitle}>{this.props.beach.name}</Text>
         </TouchableHighlight>
+
+        <Text style={styles.beachTitleDistance}>150m</Text>
       </View>
     );
   }
@@ -23,14 +25,28 @@ export default class BeachButton extends Component {
 
 const styles = StyleSheet.create({
   beach: {
+    flexDirection: 'row',
     width: '100%'
+  },
+  button: {
+    width: '80%'
   },
   beachTitle: {
     backgroundColor: 'blue',
-    fontSize: 24,
+    fontSize: 28,
     color: 'white',
-    padding: 25,
-    margin: 5,
-  }
+    padding: 15,
+    margin: 2
+  },
+  beachTitleDistance: {
+    backgroundColor: '#aaaaaa',
+    fontSize: 18,
+    color: 'white',
+    padding: 15,
+    margin: 2,
+    width: '20%'
+
+  },
+
 });
 

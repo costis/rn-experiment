@@ -5,7 +5,7 @@ import BeachButton from '../BeachButton/BeachButton'
 export default class BeachesList extends Component {
   beachSelected = (beachId) => {
     const {beaches} = this.props;
-    beach = beaches.find((beach) => beach.id == beachId ? true : false)
+    beach = beaches.find((beach) => beach.id == beachId ? true : false);
 
     this.props.navigation
       .navigate('BeachDetail', {beach: beach});

@@ -6,7 +6,7 @@ export default class BeachDetail extends React.Component {
     const {params} = navigation.state;
 
     return {
-      title: params ? `Beach '${params.beach.name}'` : 'A Nested Details Screen',
+      title: params ? `Beaches / ${params.beach.name}` : 'A Nested Details Screen',
     }
   };
 
