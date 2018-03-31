@@ -9,9 +9,6 @@ const MyStack = (props) => {
   const NavigationStack = StackNavigator({
       BeachDetail: {
         screen: BeachDetail,
-        navigationOptions: ({navigation}) => ({
-          title: 'Best Beaches',
-        })
       },
       BeachesList: {
         screen: (pops) => <BeachesList {...pops} beaches={props.beaches}/>
