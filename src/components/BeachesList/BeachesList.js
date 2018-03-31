@@ -3,6 +3,10 @@ import {View} from 'react-native';
 import BeachButton from '../BeachButton/BeachButton'
 
 export default class BeachesList extends Component {
+  static navigationOptions = {
+    title: 'Beaches',
+  };
+
   beachSelected = (beachId) => {
     const {beaches} = this.props;
     beach = beaches.find((beach) => beach.id == beachId ? true : false);
@@ -10,7 +14,6 @@ export default class BeachesList extends Component {
     this.props.navigation
       .navigate('BeachDetail', {beach: beach});
   };
-
 
   render() {
     const {beaches} = this.props;

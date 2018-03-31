@@ -6,38 +6,41 @@ import BeachDetail from './src/components/BeachDetail/BeachDetail'
 
 import AppState from './src/db/db';
 
-const MyStack = (props) => {
-  const NavigationStack = StackNavigator({
-      BeachDetail: {
-        screen: BeachDetail,
-      },
-      BeachesList: {
-        screen: (pops) => <BeachesList {...pops} beaches={props.beaches}/>
-      }
+const MyStack = StackNavigator({
+    BeachDetail: {
+      screen: BeachDetail,
     },
-    {
-      initialRouteName: 'BeachesList'
+    BeachesList: {
+      screen: (_props) => <BeachesList {..._props} beaches={AppState.beaches}/>,
+      navigationOptions: {
+        title: "Beaches",
+        headerStyle: {
+          backgroundColor: '#f4511e',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontSize: 34
+        },
+      }
     }
-  );
+  },
+  {
+    initialRouteName: 'BeachesList'
+  }
+);
 
-  return <NavigationStack/>
-};
-export default class App extends React.Component {
-  state = AppState;
+export default MyStack
 
-  render() {
-    return <MyStack beaches={this.state.beaches}/>
-  };
 
-  // render() { return (<BeachesList beaches={this.state.beaches}/>); }
+// render() { return (<BeachesList beaches={AppState.beaches}/>); }
 
-  // const nav = {
-  //   state : {
-  //     params: {
-  //       beach: this.state.beaches[0]
-  //     }
-  //   }
-  // }
-  // return <BeachDetail navigation={nav}/>
+// const nav = {
+//   state : {
+//     params: {
+//       beach: this.state.beaches[0]
+//     }
+//   }
+// }
+// return <BeachDetail navigation={nav}/>
 
-}
