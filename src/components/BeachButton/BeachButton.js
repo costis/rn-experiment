@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableHighlight, StyleSheet} from 'react-native';
 
-export default class BeachesItem extends Component {
+export default class BeachButton extends Component {
 
   _onBeachSelected = (evt) => {
     this.props.selected(this.props.beach.id);

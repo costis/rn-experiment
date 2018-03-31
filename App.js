@@ -1,28 +1,24 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
 import {StackNavigator} from 'react-navigation'
 
 import BeachesList from './src/components/BeachesList/BeachesList';
-
-const Screen1 = (props) => {
-  return <Text>Screen1</Text>
-};
+import BeachDetail from './src/components/BeachDetail/BeachDetail'
 
 
 const MyStack = (props) => {
   const NavigationStack = StackNavigator({
-      Home: {
-        screen: (props) => <Screen1 {...props}/>,
+      BeachDetail: {
+        screen: BeachDetail,
         navigationOptions: ({navigation}) => ({
           title: 'Best Beaches',
         })
       },
-      Beach: {
-        screen: (pops) => <BeachesList {...pops} beaches={props.beaches} />
+      BeachesList: {
+        screen: (pops) => <BeachesList {...pops} beaches={props.beaches}/>
       }
     },
     {
-      initialRouteName: 'Beach'
+      initialRouteName: 'BeachesList'
     }
   );
 
