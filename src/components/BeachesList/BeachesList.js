@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
-import BeachItem from '../BeachItem/BeachItem'
+import BeachButton from '../BeachButton/BeachButton'
 
 export default class BeachesList extends Component {
   selected = (beach_id) => {
@@ -12,7 +12,7 @@ export default class BeachesList extends Component {
 
     const beachesList = beaches.map((beach) => {
       return (
-        <BeachItem beach={beach} key={beach.id} selected={this.selected}/>
+        <BeachButton beach={beach} key={beach.id} selected={this.selected}/>
       );
     });
 
