@@ -8,24 +8,21 @@ const Screen1 = (props) => {
   return <Text>Screen1</Text>
 };
 
-const Screen2 = (props) => {
-  return <Text>Screen2</Text>
-};
 
 const MyStack = (props) => {
   const NavigationStack = StackNavigator({
       Home: {
-        screen: Screen1,
+        screen: (props) => <Screen1 {...props}/>,
         navigationOptions: ({navigation}) => ({
           title: 'Best Beaches',
         })
       },
-      Second: {
-        screen: Screen2
+      Beach: {
+        screen: (pops) => <BeachesList {...pops} beaches={props.beaches} />
       }
     },
     {
-      initialRouteName: 'Home'
+      initialRouteName: 'Beach'
     }
   );
 
@@ -67,6 +64,6 @@ export default class App extends React.Component {
   };
 
   render() {
-    return <MyStack/>;
+    return <MyStack beaches={this.state.beaches}/>;
   }
 }

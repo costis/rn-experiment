@@ -1,19 +1,18 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableHighlight, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import BeachItem from '../BeachItem/BeachItem'
 
 export default class BeachesList extends Component {
-  state = {
-    beaches: this.props.beaches
+  selected = (beach_id) => {
+    this.props.navigation.navigate('Home');
   };
 
   render() {
-    const beachesList = this.state.beaches.map((beach) => {
+    const {beaches} = this.props;
+
+    const beachesList = beaches.map((beach) => {
       return (
-        <View>
-          <Text>Hello world</Text>
-        <BeachItem beach={beach} key={beach.id}/>
-        </View>
+        <BeachItem beach={beach} key={beach.id} selected={this.selected}/>
       );
     });
 

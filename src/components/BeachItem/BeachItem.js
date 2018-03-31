@@ -4,7 +4,7 @@ import {View, Text, TouchableHighlight, StyleSheet} from 'react-native';
 export default class BeachesItem extends Component {
 
   _onBeachSelected = (evt) => {
-    alert(`Baby woke up ${evt}`);
+    this.props.selected(this.props.beach.id);
   };
 
   render() {
