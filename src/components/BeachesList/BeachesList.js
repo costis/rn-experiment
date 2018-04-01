@@ -15,6 +15,7 @@ export default class BeachesList extends Component {
       .navigate('BeachDetail', {beach: beach});
   };
 
+
   render() {
     const {beaches} = this.props;
 

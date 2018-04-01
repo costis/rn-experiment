@@ -10,6 +10,8 @@ export default class BeachDetail extends React.Component {
     }
   };
 
+  distance = () => Math.floor(Math.random() * Math.floor(100));
+
   render() {
     const {params} = this.props.navigation.state;
     const beach = params.beach;
@@ -33,7 +35,7 @@ export default class BeachDetail extends React.Component {
 
       <View style={style.rowInfo}>
         <Text style={style.label}>Distance</Text>
-        <Text style={style.val}>350m</Text>
+        <Text style={style.val}>{`${this.distance()} m`}</Text>
       </View>
 
       <Image source={beach.image}/>

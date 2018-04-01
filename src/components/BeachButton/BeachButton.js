@@ -7,6 +7,8 @@ export default class BeachButton extends Component {
     this.props.selected(this.props.beach.id);
   };
 
+  distance = () => Math.floor(Math.random() * Math.floor(10000));
+
   render() {
     return (
       <View style={styles.beach} key={this.props.beach.id}>
@@ -17,7 +19,7 @@ export default class BeachButton extends Component {
           <Text style={styles.beachTitle}>{this.props.beach.name}</Text>
         </TouchableHighlight>
 
-        <Text style={styles.beachTitleDistance}>150m</Text>
+        <Text style={styles.beachTitleDistance}>{`${this.distance()} m`}</Text>
       </View>
     );
   }
@@ -29,7 +31,7 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   button: {
-    width: '80%'
+    width: '75%'
   },
   beachTitle: {
     backgroundColor: 'blue',
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     color: 'white',
     padding: 15,
     margin: 2,
-    width: '20%'
+    width: '25%'
 
   },
 
