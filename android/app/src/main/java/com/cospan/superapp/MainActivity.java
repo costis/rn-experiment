@@ -1,4 +1,4 @@
-package com.rncourse;
+package com.cospan.superapp;
 
 import com.facebook.react.ReactActivity;
 
