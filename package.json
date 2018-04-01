@@ -5,6 +5,7 @@
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "jest-react-native": "^18.0.0",
+    "prettier": "^1.11.1",
     "react-test-renderer": "16.2.0"
   },
   "scripts": {
