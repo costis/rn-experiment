@@ -1,12 +1,16 @@
 import React from 'react';
 import {StackNavigator} from 'react-navigation'
 
+import HomeScreen from './src/components/HomeScreen/HomeScreen'
 import BeachesList from './src/components/BeachesList/BeachesList';
 import BeachDetail from './src/components/BeachDetail/BeachDetail'
 
 import AppState from './src/db/db';
 
 const MyStack = StackNavigator({
+    Home: {
+      screen: HomeScreen,
+    },
     BeachDetail: {
       screen: BeachDetail,
     },
@@ -26,7 +30,8 @@ const MyStack = StackNavigator({
     }
   },
   {
-    initialRouteName: 'BeachesList'
+    // initialRouteName: 'BeachesList'
+    initialRouteName: 'Home'
   }
 );
 
