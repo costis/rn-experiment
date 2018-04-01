@@ -17,11 +17,11 @@ export default class HomeScreen extends React.Component {
         />
         <Button
           title="Places of interest"
-          onPress={() => navigation.navigate('BeachesList')}
+          onPress={() => navigation.navigate('POI')}
         />
         <Button
           title="History"
-          onPress={() => navigation.navigate('BeachesList')}
+          onPress={() => navigation.navigate('History')}
         />
         <Button
           title="Usefull numbers"

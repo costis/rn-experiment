@@ -1,15 +1,23 @@
 import React from 'react';
-import {StackNavigator} from 'react-navigation'
+import {StackNavigator} from 'react-navigation';
 
-import HomeScreen from './src/components/HomeScreen/HomeScreen'
+import HomeScreen from './src/components/HomeScreen/HomeScreen';
 import BeachesList from './src/components/BeachesList/BeachesList';
-import BeachDetail from './src/components/BeachDetail/BeachDetail'
+import BeachDetail from './src/components/BeachDetail/BeachDetail';
+import HistoryScreen from './src/components/HistoryScreen/HistoryScreen';
+import POIScreen from './src/components/POIScreen/POIScreen';
 
 import AppState from './src/db/db';
 
 const MyStack = StackNavigator({
     Home: {
       screen: HomeScreen,
+    },
+    History: {
+      screen: HistoryScreen,
+    },
+    POI: {
+      screen: POIScreen,
     },
     BeachDetail: {
       screen: BeachDetail,
